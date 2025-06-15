@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+</head>
+<body>
+    <h1>Guessing Game (While Loop)</h1>
+    <p>A prompt should have appeared asking you to guess a number between 1 and 10.</p>
+    <p>If you're seeing this, congrats! You've guessed correctly.</p>
+
+    <script>
+        console.log("Guessing Game")
+
+        // generate random number 1-10
+        const secretNum = Math.floor(Math.random() * 10) + 1;
+        let hasGuessedCorrectly = false;
+
+        while (!hasGuessedCorrectly) {
+            // prompt user for guess
+            let userGuessInput = prompt("Guess a number between 1 and 10.");
+
+            // check if user clicked "cancel"
+            if (userGuessInput === null) {
+                alert("Game cancelled. The secret number was " + secretNum);
+                break;
+            }
+
+            let userGuess = parseInt(userGuessInput);
+
+            // check if input is valid number
+            if (isNaN(userGuess)) {
+                alert("That's not a number. Please try again.")
+                continue;
+            }
+
+            // check if guess is correct
+            if (userGuess === secretNum) {
+                hasGuessedCorrectly = true;
+                alert(`Congrats! The correct number was ${secreNum}.`);
+            } else {
+                alert("Incorrect guess. Please try again.")
+            }
+        }
+    </script>
+</body>
+</html>

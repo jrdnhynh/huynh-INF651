@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Finder</title>
+</head>
+<body>
+    <h1>Day Finder (Switch Case)</h1>
+    <p>A prompt should have appeared asking you to enter a number from 1 to 7.</p>
+
+    <script>
+        console.log("Day Finder")
+
+        // prompt user for number 1-7
+        const dayInput = prompt("Enter a number between 1 and 7:");
+        const dayNumber = parseInt(dayInput);
+        let dayOfWeek;
+
+        // switch statement to find day
+        switch (dayNumber) {
+            case 1:
+                dayOfWeek = "Sunday";
+                break;
+            case 2:
+                dayOfWeek = "Monday";
+                break;
+            case 3:
+                dayOfWeek = "Tuesday";
+                break;
+            case 4:
+                dayOfWeek = "Wednesday";
+                break;
+            case 5:
+                dayOfWeek = "Thursday";
+                break;
+            case 6:
+                dayOfWeek = "Friday";
+                break;
+            case 7:
+                dayOfWeek = "Saturday";
+                break;
+            default:
+                dayOfWeek = "Invalid input. Please enter a number between 1 and 7.";
+        }
+
+        // display day of week
+        alert(dayOfWeek);
+    </script>
+</body>
+</html>
