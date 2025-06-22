@@ -1,4 +1,5 @@
 **Movie Watchlist Application**
+
 A simple web application that allows users to create and manage a personal movie watchlist. This project demonstrates core JavaScript concepts, including functions, arrays, DOM manipulation, and event handling, within a single HTML file.
 
 **How to Use the Application**
