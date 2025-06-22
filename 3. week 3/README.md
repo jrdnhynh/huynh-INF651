@@ -1,10 +1,8 @@
-**Movie Watchlist Application**
+#Movie Watchlist Application
 
 A simple web application that allows users to create and manage a personal movie watchlist. This project demonstrates core JavaScript concepts, including functions, arrays, DOM manipulation, and event handling, within a single HTML file.
 
-**How to Use the Application**
-
-Interacting with the watchlist is straightforward:
+##How to Use the Application
 
 **Add a Movie**: Type the title of a movie into the input field labeled "Enter movie title". You can then either click the Add Movie button or press the Enter key on your keyboard.
 
