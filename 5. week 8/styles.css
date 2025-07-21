@@ -1,0 +1,107 @@
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a202c;
+    color: #e2e8f0;
+    margin: 0;
+    overflow: hidden; /* prevent scrollbars */
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700; 
+    margin-bottom: 2rem;
+    color: #63b3ed;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.beat-pad-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 1.5rem; /* space between pads */
+    padding: 2rem;
+    background-color: #2d3748;
+    border-radius: 1.5rem; /* rounded corners for the container */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    max-width: 90%;
+    width: 600px;
+}
+
+.pad {
+    width: 100%;
+    padding-top: 100%; /* makes the pad square */
+    position: relative;
+    background-color: #4a5568; /* pad default color */
+    border-radius: 1rem; /* rounded corners for pads */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.1s ease, box-shadow 0.1s ease;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    user-select: none; /* prevent text selection */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 2px solid #6b7280;
+}
+
+.pad span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 1.2; /* adjust line height for multi-line labels */
+}
+
+.pad small {
+    color: #a0aec0;
+}
+
+.pad:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.pad:active, .pad.active {
+    transform: scale(0.95);
+    background-color: #63b3ed; /* brighter blue when active */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    border-color: #3182ce; /* darker blue border */
+}
+
+/* responsive */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .beat-pad-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller tablets */
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+    .pad {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .beat-pad-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on very small screens */
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+    .pad {
+        font-size: 0.9rem;
+    }
+}
